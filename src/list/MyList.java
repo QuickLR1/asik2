@@ -14,9 +14,9 @@ public interface MyList<T> extends Iterable<T> { // T это generic( типо �
     T getFirst();
     T getLast();
 
-    T remove(int index);
-    T removeFirst();
-    T removeLast();
+    void remove(int index);
+    void removeFirst();
+    void removeLast();
 
     void sort();
 

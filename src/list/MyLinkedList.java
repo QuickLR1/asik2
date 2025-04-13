@@ -247,4 +247,23 @@ public class MyLinkedList<T extends Comparable<T>> implements MyList<T> {
 
         size--;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+
+        Node current = head;
+        while (current != null) {
+            sb.append(current.value);
+            if (current.next != null) {
+                sb.append(", ");
+            }
+            current = current.next;
+        }
+
+        sb.append("]");
+        return sb.toString();
+    }
+
 }
